@@ -7,7 +7,7 @@ int main() {
 
 	setlocale(LC_ALL, "ru");
 
-	printf("Р’РІРµРґРёС‚Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ x,y: ");
+	printf("Введите координаты x,y: ");
 	scanf("%d %d", &x, &y);
 	_asm {
 		mov ecx, dword ptr [x];
@@ -24,12 +24,12 @@ int main() {
 
 	  end:
 		mov dword ptr [result], eax;
-	}
+		}
 
 	if (result==1) 
-		printf("РўРѕС‡РєР° РЅР°С…РѕРґРёС‚СЃСЏ РІ РѕР±Р»Р°СЃС‚Рё");
+		printf("Точка находится в области");
 	else
-		printf("РўРѕС‡РєР° РќР• РЅР°С…РѕРґРёС‚СЃСЏ РІ РѕР±Р»Р°СЃС‚Рё");
+		printf("Точка НЕ находится в области");
 
 	return 0;
 }
